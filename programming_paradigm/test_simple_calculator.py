@@ -40,6 +40,13 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertEqual(self.calc.multiply(-2, -3), 6)
         self.assertEqual(self.calc.multiply(1.5, 2), 3.0)
 
+    def test_multiplication(self):
+        self.assertEqual(self.calc.multiply(2, 3), 6)
+        self.assertEqual(self.calc.multiply(-1, 1), -1)
+        self.assertEqual(self.calc.multiply(0, 100), 0)
+        self.assertEqual(self.calc.multiply(-2, -3), 6)
+        self.assertEqual(self.calc.multiply(1.5, 2), 3.0)
+
     def test_divide(self):
         self.assertEqual(self.calc.divide(6, 3), 2)
         self.assertEqual(self.calc.divide(-6, 3), -2)
