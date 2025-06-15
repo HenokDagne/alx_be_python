@@ -55,5 +55,13 @@ class TestSimpleCalculator(unittest.TestCase):
         self.assertIsNone(self.calc.divide(5, 0))
         self.assertIsNone(self.calc.divide(0, 0))
 
+    def test_division(self):
+        self.assertEqual(self.calc.divide(6, 3), 2)
+        self.assertEqual(self.calc.divide(-6, 3), -2)
+        self.assertEqual(self.calc.divide(5, 2), 2.5)
+        self.assertEqual(self.calc.divide(0, 1), 0)
+        self.assertIsNone(self.calc.divide(5, 0))
+        self.assertIsNone(self.calc.divide(0, 0))
+
 if __name__ == "__main__":
     unittest.main()
